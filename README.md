@@ -1,5 +1,6 @@
 # polygraphRegenerate
-You can regenerate, or change, the PolyLama NFT. If you have one NFT you can read the raw data and use it for create your image.
+You can regenerate, or change, the PolyLama NFT. If you have one NFT of [PolyLama Project](https://opensea.io/collection/polylama) you can read the raw data and use it for create your image.
+
 
 
 # How to Build 
@@ -15,7 +16,7 @@ dotnet publish .\src\polygraphRegenerate\polygraphRegenerate.csproj -o <YouPathO
 
 # How to use
 
-If you have a PolyLama, you can access to unlockable content.
+If you have a PolyLama form [PolyLama Project](https://opensea.io/collection/polylama), you can access to unlockable content.
 
 ![](/repository/image01.png)
 
