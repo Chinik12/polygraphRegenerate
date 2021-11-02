@@ -1,6 +1,8 @@
-﻿using Polygraph.Core;
+﻿using Microsoft.Extensions.CommandLineUtils;
+using Polygraph.Core;
 using Polygraph.Core.DM;
 using System;
+using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Text.Json;
@@ -9,18 +11,31 @@ namespace polygraphRegenerate
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            var filepath = "D:\\github\\polygraphRegenerate\\repository\\example.json";
-            string jsonString = File.ReadAllText(filepath);
-            var pi = JsonSerializer.Deserialize<Polyimage>(jsonString);
+            var app = new CommandLineApplication
+            {
+                Name = "polygraphRegenerate",
+                Description = "example to generate a PolyLama from metadata"
+            };
 
-            //If you want you can change the data 
-            pi.Scale = 1;
+            app.HelpOption("-?|-h|--help");
+            var filepath = app.Option("-f|--file", "File path of metadata", CommandOptionType.SingleValue);
 
-            var pd = new PolydrawRegenerate(pi);
-            pd.Draw();
-            pd.Save($"image#{pi.Id.ToString("00000")}.png", ImageFormat.Png);
+            app.OnExecute(() =>
+            {
+                string jsonString = File.ReadAllText(filepath.Value());
+                var pi = JsonSerializer.Deserialize<Polyimage>(jsonString);
+
+                //If you want you can change the data 
+                pi.Backgroundcolor.Color = Color.FromArgb(0, 0, 0);
+
+                var pd = new PolydrawRegenerate(pi);
+                pd.Draw();
+                pd.Save($"image#{pi.Id.ToString("00000")}.png", ImageFormat.Png);
+                return 0;
+            });
+            return app.Execute(args);
         }
     }
 }
