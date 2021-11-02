@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31808.319
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polygraph.Core", "src\Polygraph.Core\Polygraph.Core.csproj", "{D865148B-352C-4B5F-A504-01B06B26B878}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polygraph.Test", "test\Polygraph.Test\Polygraph.Test.csproj", "{48E29036-766C-4A77-A6B1-3389345DE81C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "polygraphRegenerate", "src\polygraphRegenerate\polygraphRegenerate.csproj", "{04E66164-BADE-4499-8919-115E22CA7094}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D865148B-352C-4B5F-A504-01B06B26B878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D865148B-352C-4B5F-A504-01B06B26B878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D865148B-352C-4B5F-A504-01B06B26B878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D865148B-352C-4B5F-A504-01B06B26B878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E29036-766C-4A77-A6B1-3389345DE81C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E29036-766C-4A77-A6B1-3389345DE81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E29036-766C-4A77-A6B1-3389345DE81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E29036-766C-4A77-A6B1-3389345DE81C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E66164-BADE-4499-8919-115E22CA7094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E66164-BADE-4499-8919-115E22CA7094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E66164-BADE-4499-8919-115E22CA7094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E66164-BADE-4499-8919-115E22CA7094}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78363A5D-98A3-424C-8DDD-4D560F07E6DE}
+	EndGlobalSection
+EndGlobal
